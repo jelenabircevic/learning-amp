@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- top level tag that identifies the page as AMP content <html ⚡> or <html amp>
+    also, both <head> and <body> elements are required (unlike in the regular HTML) -->
+<html amp lang="en">
+  <head>
+    <!-- meta element must be the first child of the head element -->
+    <meta charset="utf-8">
+    <!-- second child element to the head must be script element that loads the AMP JS library -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <!-- head must also contain a link element that has the href attribute pointing to the canonical version of the same HTML document (if it exists), or to itself
+    accordingly the canonical document must point to the AMP HTML (rel attribute would have the value of "amphtml") -->
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <!-- meta tag also needs to be included in the head element, as it specifies a responsive layout -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!-- schema.org definition is not a strict requirement of the AMP, but is required to get the content distributed in certain places -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <!-- AMP boilerplate code is also required, as it initially hides the content until AMP JS is loaded -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Welcome to the mobile web</h1>
+  </body>
+</html>
